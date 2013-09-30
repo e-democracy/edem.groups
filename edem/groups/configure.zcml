@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser">
+
+  <browser:page 
+    for="gs.groups.interfaces.IGSGroupsFolder" 
+    name="index.html" 
+    class="gs.groups.page.GroupsPage" 
+    template="browser/templates/groups_homepage.pt" 
+    layer="gs.skin.ogn.edem.interfaces.IEDemLayer" 
+    permission="zope2.View"/>
+</configure>
