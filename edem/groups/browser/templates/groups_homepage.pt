@@ -37,11 +37,10 @@
                           min group/group_stats/minPerDay;
                           max group/group_stats/maxPerDay;
                           plural python:c&gt;1 or c == 0;">-->
-          <dt tal:define="postsExist group/group_stats/postsExist;
-                          min group/group_stats/minPerDay;
-                          max group/group_stats/maxPerDay;">
-            
- 
+          <dt tal:define="group_stats python:view.get_stats(group);
+                          postsExist group_stats/postsExist;
+                          min group_stats/minPerDay;
+                          max group_stats/maxPerDay;">
             <a tal:attributes="href group/relativeURL" 
                tal:content="group/name"/>
             (<span tal:replace="group/group_type"/> forum with
@@ -77,10 +76,10 @@
                          min group/group_stats/minPerDay;
                          max group/group_stats/maxPerDay;
                          plural python:c&gt;1 or c == 0;">-->
-                    <dt tal:define="postsExist group/group_stats/postsExist;
-                         min group/group_stats/minPerDay;
-                         max group/group_stats/maxPerDay;">
-
+                    <dt tal:define="group_stats python:view.get_stats(group);
+                                    postsExist group_stats/postsExist;
+                                    min group_stats/minPerDay;
+                                    max group_stats/maxPerDay;">
                       <a tal:attributes="href group/relativeURL" 
                          tal:content="group/name"/> - 
                          <!--<tal:block tal:condition="c"><span tal:replace="c"/></tal:block><tal:block tal:condition="not:c">no</tal:block> member<span tal:condition="plural" tal:replace="string:s"/>-->

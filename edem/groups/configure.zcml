@@ -3,10 +3,10 @@
            xmlns:browser="http://namespaces.zope.org/browser">
 
   <browser:page 
-    for="gs.groups.interfaces.IGSGroupsFolder" 
     name="index.html" 
-    class="gs.groups.page.GroupsPage" 
-    template="browser/templates/groups_homepage.pt" 
+    for="gs.groups.interfaces.IGSGroupsFolder" 
     layer="gs.skin.ogn.edem.interfaces.IEDemLayer" 
+    class=".page.EDemGroupsPage" 
+    template="browser/templates/groups_homepage.pt" 
     permission="zope2.View"/>
 </configure>
