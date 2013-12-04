@@ -50,7 +50,7 @@
           <dd tal:content="group/description"/>
           <dd>
             You may 
-            <a tal:attributes="href string:{group/relativeURL}/email_settings.html">change email settings</a> 
+            <a tal:attributes="href string:${group/relativeURL}/email_settings.html">change email settings</a> 
             or 
             <a tal:attributes="href string:/groups/leave.html?groupId=${group/id}">leave</a>
           </dd>
