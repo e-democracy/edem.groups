@@ -9,11 +9,11 @@
     class=".page.EDemGroupsPage" 
     template="browser/templates/groups_homepage.pt" 
     permission="zope2.View"/>
-  <browser:page 
+<!--  <browser:page 
     name="index.html" 
     for="gs.groups.interfaces.IGSGroupsFolder" 
     layer="edem.skin.interfaces.IEDemLayer" 
     class=".page.EDemGroupsPage" 
     template="browser/templates/groups_homepage.pt" 
-    permission="zope2.View"/>
+    permission="zope2.View"/>-->
 </configure>
