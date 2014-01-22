@@ -130,7 +130,9 @@
       <script type="text/javascript">
         jQuery.noConflict()
         jQuery("#joinablegroups").accordion({header: 'h3',
-                                            autoHeight: false});
+                                            autoHeight: false,
+                                            active: false,
+                                            collapsible: true});
       </script>        
     </tal:block>
   </body>
