@@ -9,13 +9,13 @@
     class=".page.EDemGroupsPage" 
     template="browser/templates/groups_homepage.pt" 
     permission="zope2.View"/>
-<!--  <browser:page 
+  <browser:page 
     name="index.html" 
     for="gs.groups.interfaces.IGSGroupsFolder" 
     layer="edem.skin.interfaces.IEDemLayer" 
-    class=".page.EDemGroupsPage" 
-    template="browser/templates/groups_homepage.pt" 
-    permission="zope2.View"/>-->
+    class="gs.groups.page.GroupsPage"
+    template="browser/templates/homepage.pt" 
+    permission="zope2.View"/>
 
   <!--"Hide" the group listing viewlet already declared for the Site Homepage --> 
   <browser:viewlet
