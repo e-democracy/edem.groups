@@ -25,4 +25,11 @@
     manager="gs.site.home.interfaces.ISiteHomeMain"
     class=".viewlets.GroupsSiteHomeViewlet"
     permission="zope2.View"/>
+
+  <!-- JavaScript -->
+  <browser:resource
+    name="edem-groups-collapse.js"
+    file="browser/js/collapse.js"
+    layer="edem.skin.interfaces.IEDemSkin"
+    permission="zope2.Public"/>
 </configure>

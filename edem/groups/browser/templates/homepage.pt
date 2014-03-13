@@ -126,14 +126,8 @@
     </tal:block>
     <tal:block metal:fill-slot="javascript">
       <script src="/++resource++jquery-ui-1.10.3.min.js" 
-        type="text/javascript">&#160;</script>
-      <script type="text/javascript">
-        jQuery.noConflict()
-        jQuery("#joinablegroups").accordion({header: 'h3',
-                                            autoHeight: false,
-                                            active: false,
-                                            collapsible: true});
-      </script>        
+        type="text/javascript" defer="true">&#160;</script>
+      <script type="text/javascript" src="/++resource++edem-groups-collapse.js" defer="true"> &#160;</script>        
     </tal:block>
   </body>
 </html>
