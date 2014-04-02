@@ -1,15 +1,22 @@
-version='2.0'
-release=False
+# coding=utf-8
+from __future__ import absolute_import, unicode_literals
 
-#-------------------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+
+version = '2.0'
+release = False
+
+#-----------------------------------------------------------------------------#
 
 import commands
 import datetime
 import os
 import glob
 
+
 class CommandError(Exception):
     pass
+
 
 def execute_command(commandstring):
     status, output = commands.getstatusoutput(commandstring)
@@ -17,13 +24,13 @@ def execute_command(commandstring):
         raise CommandError
     return output
 
+
 def parse_version_from_package():
     try:
-        pkginfo = os.path.join(glob.glob('*.egg-info')[0],
-                                         'PKG-INFO')
+        pkginfo = os.path.join(glob.glob('*.egg-info')[0], 'PKG-INFO')
     except:
         pkginfo = ''
-    
+
     version_string = ''
     if os.path.exists(pkginfo):
         for line in file(pkginfo):
@@ -33,8 +40,9 @@ def parse_version_from_package():
             version_string = '%s-dev' % version
     else:
         version_string = version
-    
+
     return version_string
+
 
 def get_version():
     try:
@@ -45,13 +53,10 @@ def get_version():
 
         version_string = "%s-%s-%s" % (version, datestring, commithash)
 
-    except CommandError, IntegerError:
+    except CommandError:
         version_string = parse_version_from_package()
 
     return version_string
 
 if __name__ == '__main__':
     print get_version()
-
-
-
