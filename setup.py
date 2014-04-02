@@ -33,8 +33,13 @@ setup(name='edem.groups',
     zip_safe=True,
     install_requires=[
         'setuptools',
-        'gs.skin.ogn.edem',
-        'gs.groups'
+        'edem.skin',
+        'gs.group.stats',
+        'gs.groups',
+        'gs.site.home',
+        'gs.viewlet',
+        'Products.GSContent',
+        'zope.cachedescriptors',
         # -*- Extra requirements: -*-
     ],
     entry_points="""
