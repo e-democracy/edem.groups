@@ -21,8 +21,8 @@
 
   <!-- JavaScript -->
   <browser:resource
-    name="edem-groups-collapse.js"
-    file="browser/js/collapse.js"
+    name="edem-groups-collapse-20140402.js"
+    file="browser/js/collapse-min.js"
     layer="edem.skin.interfaces.IEDemSkin"
     permission="zope2.Public"/>
 </configure>
