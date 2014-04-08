@@ -9,7 +9,7 @@
     name="index.html"
     for="gs.groups.interfaces.IGSGroupsFolder"
     layer="edem.skin.interfaces.IEDemLayer"
-    class="gs.groups.page.GroupsPage"
+    class=".page.EDemGroupsPage"
     template="browser/templates/homepage.pt"
     permission="zope2.View"/>
 
