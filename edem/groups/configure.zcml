@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <configure xmlns="http://namespaces.zope.org/zope"
-           xmlns:browser="http://namespaces.zope.org/browser">
+           xmlns:browser="http://namespaces.zope.org/browser"
+           i18n_domain="edem">
 
-  <browser:page 
-    name="index.html" 
-    for="gs.groups.interfaces.IGSGroupsFolder" 
-    layer="edem.skin.interfaces.IEDemLayer" 
+  <include package="zope.viewlet" file="meta.zcml" />
+
+  <browser:page
+    name="index.html"
+    for="gs.groups.interfaces.IGSGroupsFolder"
+    layer="edem.skin.interfaces.IEDemLayer"
     class="gs.groups.page.GroupsPage"
-    template="browser/templates/homepage.pt" 
+    template="browser/templates/homepage.pt"
     permission="zope2.View"/>
 
-  <!--"Hide" the group listing viewlet already declared for the Site Homepage --> 
+  <!--"Hide" the group listing viewlet already declared for the
+       Site Homepage -->
   <browser:viewlet
     name="gs-groups-list"
     for="Products.GSContent.interfaces.IGSSiteFolder"
