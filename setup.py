@@ -33,17 +33,22 @@ setup(
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['edem'],
     include_package_data=True,
-    zip_safe=True,
+    zip_safe=False,
     install_requires=[
         'setuptools',
+        'zope.browserpage',
+        'zope.browserresource',
+        'zope.cachedescriptors',
+        'zope.tal',
+        'zope.tales',
+        'zope.viewlet',
         'edem.skin',
         'gs.group.stats',
         'gs.groups',
         'gs.site.home',
         'gs.viewlet',
         'Products.GSContent',
-        'zope.cachedescriptors',
-        # -*- Extra requirements: -*-
+        'gs.shim.groups',
     ],
     entry_points="""
     # -*- Entry points: -*-
