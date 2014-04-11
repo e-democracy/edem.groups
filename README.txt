@@ -40,6 +40,16 @@ Having imported the logic and template of gs.groups' /groups page, the
 E-Democracy page is now able to exist independent of what is provided by 
 gs.groups.
 
+Disabled Groups Viewlet on the Homepage
+=======================================
+
+Again, because of the large number of groups on forums.e-democracy.org, it
+became clear that E-Democracy needed a different way to display the site's
+groups than the default listing of groups on the site homepage provided by
+GroupServer. Thus, this egg disables the site home's listing of groups via
+the *GroupsSiteHomeViewlet* in **viewlets.py**, which simply has a show()
+method that returns False.
+
 Resources
 =========
 
