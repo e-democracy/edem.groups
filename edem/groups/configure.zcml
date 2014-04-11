@@ -10,7 +10,7 @@
     for="gs.groups.interfaces.IGSGroupsFolder"
     layer="edem.skin.interfaces.IEDemLayer"
     class=".page.EDemGroupsPage"
-    template="browser/templates/homepage.pt"
+    template="browser/templates/groups_homepage.pt"
     permission="zope2.View"/>
 
   <!--"Hide" the group listing viewlet already declared for the
